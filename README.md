@@ -60,14 +60,6 @@ If you dont have either Python, Tkinter, or Ttkbootstrap installed refer to the 
    - On Windows: `python test_gui.py`
    - On macOS/Linux: `python3 test_gui.py`
    - A window with a styled label should appear.
-
-
-### Write the instructions to a text file
-
-    with open("python_gui_setup.txt", "w", encoding="utf-8") as file:
-        file.write(instructions)
-    
-    print("Installation guide has been written to 'python_gui_setup.txt'.")
   
 # 🚀 About
 This project was created by me as a school project. The Korpsot Calculator is a simple linear algebra calculator like for solving x against y = mx + c.
