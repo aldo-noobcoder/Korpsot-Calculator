@@ -1,11 +1,10 @@
-﻿import random
+import random
 import tkinter as tk
 from tkinter import messagebox
 import ttkbootstrap as ttk
 from ttkbootstrap import Style
 
-
-class LinearEquationSolver:
+class KorpsorCalculator:
     def __init__(self, root):
         self.style = Style(theme='cyborg')
         self.primary_color = "#22C55E"
@@ -13,17 +12,13 @@ class LinearEquationSolver:
                              focuscolor=[('!focus', 'none')],
                              bordercolor=[('focus', self.primary_color), ('!focus', self.primary_color)])
         self.style.configure('primary.TLabel', foreground=self.primary_color)
-        self.style.configure("primary.TEntry", focuscolor=[('focus', self.primary_color)],
-                             bordercolor=[('focus', self.primary_color)])
         self.style.map('primary.TButton', background=[('active', '#16A085')])
 
         self.root = root
-        self.root.title("Linear Equation Solver")
         self.root.geometry("650x1080")
 
         self.canvas_width = 600
         self.canvas_height = 500
-        self.scale = 20  # 20 pixels = 1 unit
         self.center_x = self.canvas_width // 2
         self.center_y = self.canvas_height // 2
 
@@ -119,14 +114,11 @@ class LinearEquationSolver:
 
         self.results_text.insert(tk.END, "Solving for x:\n")
         self.results_text.insert(tk.END, f"Given: y = {y:g}\n")
-
         self.results_text.insert(tk.END, "-" * 40 + "\n")
-
         self.results_text.insert(tk.END, "Solution:\n")
         self.results_text.insert(tk.END, f"x = {x:0.2f}\n\n")
 
         y_check = m * x + c
-
         error = abs(y_check - y)
         self.results_text.insert(tk.END, f"Error: {error:0.2f}\n")
         self.results_text.config(state="disabled")
@@ -160,7 +152,6 @@ class LinearEquationSolver:
                                       font=("Arial", 12, "bold"))
 
     def draw_display_line(self, x0, y0, x1, y1):
-
         self.graph_canvas.delete("all")
 
         self.draw_x_y_lines()
@@ -184,5 +175,5 @@ class LinearEquationSolver:
 
 
 root = ttk.Window(themename='cyborg')
-mainApp = LinearEquationSolver(root)
+mainApp = KorpsorCalculator(root)
 root.mainloop()
