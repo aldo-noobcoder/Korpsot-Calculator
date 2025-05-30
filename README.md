@@ -93,6 +93,8 @@ This picture contains the full window of the Korpsot solver
 ![Korpsot Preview Picture](https://files.catbox.moe/mrj5ct.png)
 to calculate your x when y is defined, input your y = mx + c in the first 2 inputs to define your m and c variables then solve x when y is inputted. Then, click the "Solve for x button" the solution for x should display in the "solution" display frame. 
 
+Video preview available [here](https://files.catbox.moe/mfww5c.mp4)
+
 ### Reset Inputs
 To reset your input just click the red button that says "Clear", it should empty every input.
 
